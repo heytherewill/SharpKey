@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>dotnet-SharpKey-8442BA4F-DDD3-4F95-8DB1-3B76736F9E46</UserSecretsId>
+  </PropertyGroup>
+
+  
+  <ItemGroup>
+    <Compile Include="KeyHandler.fs" />
+    <Compile Include="Shortcuts.Windows.fs" />
+    <Compile Include="Worker.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
+    <PackageReference Include="SharpHook" Version="1.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="FSharp.Core" Version="6.0.1" />
+  </ItemGroup>
+</Project>
