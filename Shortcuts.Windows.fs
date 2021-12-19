@@ -1,5 +1,6 @@
 ﻿module Shortcuts
 
+open KeyHandler
 let private HandleLeftKey () =
     ()
 
