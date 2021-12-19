@@ -2,6 +2,17 @@
 
 open KeyHandler
 open TextCopy
+
+let private workPrograms = [
+    TogglTrack ;
+    Gmail ;
+    WindowsTerminal ;
+    Spotify ;
+    VisualStudioCode ;
+    GitHub ;
+    Slack ;
+]
+
 /// Opens StackOverflow with the clipboard text.
 /// If no text is in the current clip, DuckDuckGo is opened instead.
 let private HandleLeftKey () =
@@ -16,10 +27,14 @@ let private HandleLeftKey () =
 let private HandleShiftLeftKey () =
     ()
 
+/// Opens all software I need for work.
 let private HandleMiddleKey () =
+    workPrograms |> Seq.iter start
     ()
     
+/// Closes all work related apps after the day is done.
 let private HandleShiftMiddleKey () =
+    workPrograms |> Seq.iter kill
     ()
 
 let private HandleRightKey () =
